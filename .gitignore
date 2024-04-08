@@ -1,0 +1,33 @@
+# Backend
+
+# Python virtual environment
+myenv/
+
+# Compiled Python files
+*.pyc
+
+# IDE/Editor specific files
+.idea
+.vscode
+
+# Logs and debugging files
+*.log
+
+# Frontend
+
+# Node.js dependencies
+/node_modules
+
+# Compiled files
+/build
+/dist
+
+# Environment variables
+.env
+
+# IDE/Editor specific files
+.idea
+.vscode
+
+# Logs and debugging files
+npm-debug.log*
