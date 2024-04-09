@@ -1,11 +1,7 @@
 from flask import Flask, request, jsonify
 import json, os
 
-from datetime import datetime
-
-app = Flask(__name__)
-
-from flask import Flask, jsonify
+from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
@@ -34,6 +30,15 @@ def create_post():
     with open(file_name, "w") as file:
         json.dump(data, file)
     return jsonify({'message': 'Post created successfully'}), 201
+
+@app.route('/validate_password', methods=['POST'])
+def login():
+    password = request.json.get('password')
+    print(password)
+    if password == '1234':
+        return jsonify({'authenticated': True}), 200
+    else:
+        return jsonify({'authenticated': False}), 401
 
 if __name__=='__main__':
     app.run(debug=True)
